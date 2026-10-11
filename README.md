@@ -1,6 +1,8 @@
 # FORGE: Ontology-Grounded Compositional Reasoning over Mechanical Engineering Drawings
 
-<!-- Overview figure will be added here when the final paper figure is available. -->
+<p align="center">
+  <img src="forge_overview.png" alt="FORGE overview" width="100%">
+</p>
 
 ## Abstract
 
