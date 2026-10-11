@@ -1,0 +1,10 @@
+threshold: 0.5
+classifier: linear
+state_layer: final_norm
+question_pooling: mean
+sentence_boundary_regex: '(?<=[.!?])\s+|\n+'
+seed: 20261009
+l2_grid: [0.0001, 0.001, 0.01, 0.1, 1.0]
+standardization_epsilon: 0.000001
+max_iter: 500
+history_size: 20

@@ -1,0 +1,37 @@
+model:
+  name: Qwen/Qwen3-VL-4B-Thinking
+  initialization: supplied_SFT_Standard_actor
+  vision_frozen: true
+lora:
+  rank: 16
+  alpha: 32
+  target_modules: all-linear
+training:
+  lr: 5.0e-6
+  kl_coef: 0.01
+  lambda_sd: 1.0
+  epochs: 1
+  updates: 138
+  vision_frozen: true
+rollout:
+  temperature: 1.0
+  top_p: 0.95
+  top_k: -1
+  n: 8
+  retry_n: 16
+prompt:
+  max_prompt_tokens: 16384
+  train_max_response_tokens: 2048
+routing:
+  max_depth_advance: 3
+  relation_budgets:
+    owner_bom_item: 44
+    has_diameter: 127
+    compare_diameter: 30
+    compare_quantity: 39
+    has_quantity: 21
+    identifies_component: 17
+  unsupported_relations:
+    - filter_quantity_gt
+closure:
+  K_closure: 58

@@ -1,0 +1,86 @@
+{
+  "synthetic-comparison": {
+    "canonical_answer": "synthetic rotor",
+    "answer_type": "component",
+    "reasoning_family": "hard_compare_then_component",
+    "reward_graph": {
+      "facts_by_feature": {
+        "F01": {
+          "diameter_mm": 42.25,
+          "bom_item": 7,
+          "component": "synthetic rotor",
+          "quantity": 11
+        },
+        "F02": {
+          "diameter_mm": 29.75,
+          "bom_item": 9,
+          "component": "synthetic collar",
+          "quantity": 3
+        }
+      },
+      "paths": [
+        [
+          {
+            "src": {
+              "kind": "feature",
+              "value": "F01"
+            },
+            "dst": {
+              "kind": "diameter",
+              "value": "42.25 mm"
+            },
+            "relation": "has_diameter"
+          }
+        ],
+        [
+          {
+            "src": {
+              "kind": "feature",
+              "value": "F02"
+            },
+            "dst": {
+              "kind": "diameter",
+              "value": "29.75 mm"
+            },
+            "relation": "has_diameter"
+          }
+        ],
+        [
+          {
+            "src": {
+              "kind": "feature",
+              "value": "F01"
+            },
+            "dst": {
+              "kind": "bom_item",
+              "value": "BOM item 7"
+            },
+            "relation": "owner_bom_item"
+          },
+          {
+            "src": {
+              "kind": "bom_item",
+              "value": "BOM item 7"
+            },
+            "dst": {
+              "kind": "component",
+              "value": "synthetic rotor"
+            },
+            "relation": "identifies_component"
+          }
+        ]
+      ],
+      "operations": [
+        {
+          "type": "compare_diameter",
+          "mode": "max",
+          "candidates": [
+            "F01",
+            "F02"
+          ],
+          "winner": "F01"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# These are adapter contract settings, not a replacement for a full EasyR1 YAML.
+public_method_config: configs/forge_orsd_vtc_qwen3vl4b.yaml
+runtime_factory: null  # Supply an importable module:function in your external trainer.
+expected_framework_commit: 602a12820f69cf45ea98de08a63b3509313a7d02
+required_hooks:
+  - controller_in_generation_window
+  - direct_only_advantages
+  - signal_free_student_forward
+  - actor_sd_addition_with_global_direct_denominator
+  - current_actor_lora_provenance
+  - one_optimizer_and_scheduler_step
